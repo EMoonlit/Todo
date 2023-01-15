@@ -24,4 +24,16 @@
       <ProjectReference Include="..\Todo.Domain\Todo.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Domain\CommandTests\CreateTodoCommandTests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Domain\CommandTests\CreateTodoCommandTests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Domain\CommandTests\CreateTodoCommandTests\**" />
+    </ItemGroup>
+
 </Project>
