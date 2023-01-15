@@ -6,22 +6,23 @@ namespace Todo.Domain.Tests.Domain.CommandTests;
 
 public class CreateTodoCommandTests
 {
+    private readonly CreateTodoCommand _invalidCommand = new CreateTodoCommand("", "", DateTime.Now);
+    private readonly CreateTodoCommand _validCommand = new CreateTodoCommand("Teste", "EMoonlit", DateTime.Now);
+    
     [Fact]
     public void ShouldCommandIsInvalid()
     {
-        var command = new CreateTodoCommand("", "", DateTime.Now);
-        command.Validate();
+        _invalidCommand.Validate();
         
-        Assert.False(command.Valid);
+        Assert.False(_invalidCommand.Valid);
     }
 
     [Fact]
     public void ShouldCommandIsValid()
     {
-        var command = new CreateTodoCommand("Teste", "EMoonlit", DateTime.Now);
-        command.Validate();
+        _validCommand.Validate();
         
-        Assert.True(command.Valid);
+        Assert.True(_validCommand.Valid);
     }
 
 }
