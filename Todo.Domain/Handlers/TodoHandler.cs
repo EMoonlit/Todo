@@ -19,7 +19,7 @@ public class TodoHandler :
         _repository = repository;
     }
     
-    public ICommandResult Handle(CreateTodoCommand command)
+    public GenericCommandResult Handle(CreateTodoCommand command)
     {
         // Fail fat Validation
         command.Validate();
