@@ -7,7 +7,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Entities" />
+      <PackageReference Include="Flunt" Version="1.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Commands\Request\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Commands\Request\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Commands\Request\**" />
     </ItemGroup>
 
 </Project>
